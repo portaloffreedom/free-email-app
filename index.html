@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='mailApp'>
+<head>
+  <title>FreeMailApp</title>
+  <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+  <link rel="stylesheet" href="styles.css">
+  
+  <script src='bower_components/angular/angular.js'></script>
+  <script src='bower_components/angular-animate/angular-animate.js'></script>
+  <script src='bower_components/angular-aria/angular-aria.js'></script>
+  <script src='bower_components/angular-material/angular-material.js'></script>
+  
+  <script src="main.js"></script>
+</head>
+
+<body ng-controller="AppCtrl" layout="column">
+  <md-toolbar layout="row">
+    <button ng-click="toggleSidenav('left')" hide-gt-sm class="menuBtn">
+      <span class="visuallyhidden">Menu</span>
+    </button>
+    <h1>Free Mail App</h1>
+  </md-toolbar>
+
+  <div layout="row" flex>
+
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$media('gt-sm')">
+      <md-list>
+        <md-item ng-repeat="mail in mails track by mail.id">
+          <md-item-content>
+            <md-button ng-click="selectMail(mail)" ng-class="{'selected' : mail === selected }">
+              <span>content:</span>
+              {{mail.content}}
+            </md-button>
+          </md-item-content>
+        </md-item>
+      </md-list>
+    </md-sidenav>
+
+    <md-button class="md-primary">Click me</md-button>
+    <md-button class="md-accent">or maybe me</md-button>
+    <md-button class="md-warn">Careful</md-button>
+    <md-button class="md-primary">Click me</md-button>
+    <md-button class="md-primary md-hue-1">Click me</md-button>
+    <md-button class="md-primary md-hue-2">Click me</md-button>
+    <md-button class="md-primary md-hue-3">Click me</md-button>
+  </div>
+
+</body>
+</html>

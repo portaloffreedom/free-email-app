@@ -1,0 +1,15 @@
+{
+  "name": "Free Mail App",
+  "description": "An IMAP-SMTP email web app client",
+  "version": "0.0.1",
+  "license": "GPL3",
+  "private": true,
+  "dependencies": {
+    "angular": "1.4.3",
+    "angular-route": "1.4.3",
+    "angular-mocks": "1.4.3",
+    "angular-animate": "1.4.3",
+    "angular-aria": "1.4.3",
+    "angular-material": "^0.10.0"
+  }
+}
